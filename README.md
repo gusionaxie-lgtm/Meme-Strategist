@@ -295,7 +295,7 @@ npm run dev
 
 Recommended:
 
-- Vercel (frontend + backend)
+- Replit (frontend + backend)
 - Supabase / Neon / Railway (database)
 
 ---
