@@ -1,10 +1,11 @@
 import { useGetDashboardSummary, useGetProfile } from "@workspace/api-client-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Activity, Plus, FolderGit2, AlertTriangle, TrendingUp, ShieldAlert, CheckCircle2 } from "lucide-react";
+import { Activity, Plus, FolderGit2, AlertTriangle, TrendingUp, ArrowRight } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import Layout from "@/components/layout";
+import { stripMarkdown } from "@/components/markdown-renderer";
 
 export default function Dashboard() {
   const { data: profile, isLoading: profileLoading } = useGetProfile();
@@ -141,7 +142,7 @@ export default function Dashboard() {
                           )}
                         </div>
                         <p className="text-sm text-muted-foreground line-clamp-1 max-w-2xl">
-                          {project.idea}
+                          {stripMarkdown(project.idea ?? "")}
                         </p>
                       </div>
                       <div className="flex items-center gap-4 text-sm font-mono">
@@ -161,5 +162,3 @@ export default function Dashboard() {
     </Layout>
   );
 }
-
-import { ArrowRight } from "lucide-react";

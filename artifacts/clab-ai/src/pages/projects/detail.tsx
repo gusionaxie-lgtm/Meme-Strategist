@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from "react";
 import { useGetProject, useGenerateProjectContent, useExportLaunchPlan } from "@workspace/api-client-react";
 import { useParams, Link } from "wouter";
 import Layout from "@/components/layout";
@@ -8,8 +7,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScoreGauge, ProgressBar } from "@/components/score-gauge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowLeft, Sparkles, Download, RefreshCcw, Activity, ShieldAlert, MessageSquare } from "lucide-react";
+import { ArrowLeft, Sparkles, Download, RefreshCcw, Activity, ShieldAlert } from "lucide-react";
 import AiChat from "@/components/ai-chat";
+import { MarkdownRenderer } from "@/components/markdown-renderer";
 
 export default function ProjectDetail() {
   const params = useParams();
@@ -186,7 +186,7 @@ export default function ProjectDetail() {
                     <CardTitle className="text-sm font-mono text-muted-foreground">CORE_IDEA</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-white whitespace-pre-wrap">{project.idea}</p>
+                    <MarkdownRenderer content={project.idea ?? ""} className="text-white" />
                   </CardContent>
                 </Card>
 
@@ -196,7 +196,7 @@ export default function ProjectDetail() {
                       <CardTitle className="text-sm font-mono text-muted-foreground">NARRATIVE</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-white whitespace-pre-wrap">{project.narrative}</p>
+                      <MarkdownRenderer content={project.narrative} className="text-white" />
                     </CardContent>
                   </Card>
                 )}
@@ -207,7 +207,62 @@ export default function ProjectDetail() {
                       <CardTitle className="text-sm font-mono text-muted-foreground">LORE</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-white whitespace-pre-wrap">{project.lore}</p>
+                      <MarkdownRenderer content={project.lore} className="text-white" />
+                    </CardContent>
+                  </Card>
+                )}
+
+                {(project as any).roadmap && (
+                  <Card className="glass-card rounded-none border-border">
+                    <CardHeader>
+                      <CardTitle className="text-sm font-mono text-muted-foreground">ROADMAP</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <MarkdownRenderer content={(project as any).roadmap} className="text-white" />
+                    </CardContent>
+                  </Card>
+                )}
+
+                {(project as any).brandVoice && (
+                  <Card className="glass-card rounded-none border-border">
+                    <CardHeader>
+                      <CardTitle className="text-sm font-mono text-muted-foreground">BRAND_VOICE</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <MarkdownRenderer content={(project as any).brandVoice} className="text-white" />
+                    </CardContent>
+                  </Card>
+                )}
+
+                {(project as any).launchThread && (
+                  <Card className="glass-card rounded-none border-border">
+                    <CardHeader>
+                      <CardTitle className="text-sm font-mono text-muted-foreground">LAUNCH_THREAD</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <MarkdownRenderer content={(project as any).launchThread} className="text-white" />
+                    </CardContent>
+                  </Card>
+                )}
+
+                {(project as any).faq && (
+                  <Card className="glass-card rounded-none border-border">
+                    <CardHeader>
+                      <CardTitle className="text-sm font-mono text-muted-foreground">FAQ</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <MarkdownRenderer content={(project as any).faq} className="text-white" />
+                    </CardContent>
+                  </Card>
+                )}
+
+                {(project as any).riskReport && (
+                  <Card className="glass-card rounded-none border-border">
+                    <CardHeader>
+                      <CardTitle className="text-sm font-mono text-muted-foreground">RISK_REPORT</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <MarkdownRenderer content={(project as any).riskReport} className="text-white" />
                     </CardContent>
                   </Card>
                 )}

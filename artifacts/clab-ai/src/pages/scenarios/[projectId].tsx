@@ -9,6 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ArrowLeft, ShieldAlert, TrendingUp, TrendingDown, RefreshCcw, Activity } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { MarkdownRenderer, stripMarkdown } from "@/components/markdown-renderer";
 
 const SCENARIO_TYPES = [
   { id: "viral_growth", label: "Viral Growth", icon: TrendingUp, color: "text-green-500 border-green-500/50 bg-green-500/10" },
@@ -183,9 +184,9 @@ export default function Scenarios() {
                 <CardContent className="pt-6 space-y-8">
                   <div>
                     <h3 className="font-mono text-sm font-bold uppercase text-muted-foreground mb-3">Predicted Outcome</h3>
-                    <p className="text-white bg-black/20 p-4 border border-border/50 rounded-sm whitespace-pre-wrap leading-relaxed">
-                      {selectedScenario.outcome}
-                    </p>
+                    <div className="text-white bg-black/20 p-4 border border-border/50 rounded-sm">
+                      <MarkdownRenderer content={selectedScenario.outcome ?? ""} className="text-white" />
+                    </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -194,10 +195,10 @@ export default function Scenarios() {
                         <Activity className="h-4 w-4" /> Key Catalysts
                       </h3>
                       <ul className="space-y-2">
-                        {selectedScenario.keyFactors.map((factor, i) => (
+                        {(selectedScenario.keyFactors ?? []).map((factor, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm">
-                            <span className="text-primary mt-0.5">•</span>
-                            <span className="text-muted-foreground">{factor}</span>
+                            <span className="text-primary mt-0.5 shrink-0">›</span>
+                            <span className="text-muted-foreground">{stripMarkdown(factor)}</span>
                           </li>
                         ))}
                       </ul>
@@ -207,10 +208,10 @@ export default function Scenarios() {
                         <ShieldAlert className="h-4 w-4" /> Mitigations / Actions
                       </h3>
                       <ul className="space-y-2">
-                        {selectedScenario.mitigations.map((mitigation, i) => (
+                        {(selectedScenario.mitigations ?? []).map((mitigation, i) => (
                           <li key={i} className="flex items-start gap-2 text-sm">
-                            <span className="text-accent mt-0.5">•</span>
-                            <span className="text-muted-foreground">{mitigation}</span>
+                            <span className="text-accent mt-0.5 shrink-0">›</span>
+                            <span className="text-muted-foreground">{stripMarkdown(mitigation)}</span>
                           </li>
                         ))}
                       </ul>
