@@ -1,13 +1,13 @@
 **Clab AI**
 
-Clab AI is an AI-powered launch strategist for the Four.meme + BNB Chain ecosystem. It is built for founders, developers, and crypto launch teams who want to move beyond hype and build meme coin concepts with stronger logic, better narrative design, clearer execution, and more realistic long-term planning.
+**Clab AI** is an AI-powered launch strategist for the Four.meme + BNB Chain ecosystem. It is built for founders, developers, and crypto launch teams who want to move beyond hype and build meme coin concepts with stronger logic, better narrative design, clearer execution, and more realistic long-term planning.
 
 Clab AI is not a gimmick generator. It is a decision support tool that helps users evaluate ideas, identify weaknesses early, simulate scenarios, and improve launch quality before a token ever goes live.
 
 
 ---
 
-Vision
+**Vision**
 
 The meme coin market moves fast, but most projects still fail for the same reasons: weak positioning, unclear identity, poor planning, and strategy built around attention rather than survival. Clab AI exists to solve that gap. It gives creators a structured way to think through naming, branding, community fit, launch timing, risk, and scenario outcomes so they can make better decisions from the start.
 
@@ -16,7 +16,7 @@ For Four.meme and BNB Chain builders, Clab AI is designed to feel like a serious
 
 ---
 
-What Problem Does It Solve?
+**What Problem Does It Solve?**
 
 Launching a meme coin is easy. Building one that holds attention, communicates a clear idea, and survives early volatility is much harder.
 
@@ -40,7 +40,7 @@ This makes the tool useful not only for creators, but also for teams that want a
 
 ---
 
-Core Product Experience
+**Core Product Experience**
 
 Clab AI follows a simple but powerful flow:
 
@@ -68,13 +68,13 @@ The goal is to make every interaction feel useful, readable, and professionally 
 
 ---
 
-Key Features
+**Key Features**
 
-1. Landing Page
+**1. Landing Page**
 
 A clean entry point that introduces Clab AI, explains the product value, and directs users toward the live demo or sign-up flow.
 
-2. Authentication System
+**2. Authentication System**
 
 Secure user authentication with persistent login support.
 
@@ -87,7 +87,7 @@ JWT or session-based auth
 remembered sessions for returning users
 
 
-3. Profile Setup
+**3. Profile Setup**
 
 Each user can define the context for their launch strategy.
 
@@ -102,7 +102,7 @@ timeline
 creator type
 
 
-4. Idea Intake
+**4. Idea Intake**
 
 Users submit project ideas in plain language, including:
 
@@ -117,7 +117,7 @@ brand direction
 early launch thoughts
 
 
-5. AI Launch Copilot
+**5. AI Launch Copilot**
 
 The core chat engine acts as a strategic assistant rather than a hype bot.
 
@@ -140,7 +140,7 @@ risk review
 execution feedback
 
 
-6. Scenario Engine
+**6. Scenario Engine**
 
 Users can simulate different futures for the project:
 
@@ -159,7 +159,7 @@ low-budget launch
 
 Each scenario is explained logically so the user understands what could happen and why.
 
-7. Launch Score Dashboard
+**7. Launch Score Dashboard**
 
 The project is evaluated across key factors such as:
 
@@ -176,7 +176,7 @@ execution difficulty
 risk level
 
 
-8. Action Center
+**8. Action Center**
 
 Important actions are available through real working buttons:
 
@@ -205,14 +205,14 @@ Compare Scenarios
 Export Full Launch Plan
 
 
-9. Analytics View
+**9. Analytics View**
 
 Users can track project changes over time, compare saved projects, and review how AI recommendations evolve as the concept improves.
 
 
 ---
 
-AI Behavior
+**AI Behavior**
 
 Clab AI is designed to behave like a strategist, not an enthusiastic echo chamber.
 
@@ -236,11 +236,11 @@ The AI should always support decision-making through logic, not excitement.
 
 ---
 
-Design System
+**Design System**
 
 The visual style is intentionally premium and understated.
 
-Visual Direction
+**Visual Direction**
 
 dark charcoal and black base
 
@@ -257,7 +257,7 @@ sharp spacing
 modern SaaS presentation
 
 
-UX Principles
+**UX Principles**
 
 mobile-first responsiveness
 
@@ -317,7 +317,7 @@ optional wallet-based login for Web3-native identity
 
 ---
 
-Database Structure
+**Database Structure**
 
 users
 
@@ -379,7 +379,7 @@ output_data
 
 ---
 
-API Overview
+**API Overview**
 
 Authentication
 
@@ -390,7 +390,7 @@ POST /api/auth/login
 GET /api/auth/me
 
 
-Profile
+**Profile**
 
 POST /api/profile
 
@@ -399,7 +399,7 @@ GET /api/profile
 PUT /api/profile
 
 
-Projects
+**Projects**
 
 POST /api/projects
 
@@ -412,7 +412,7 @@ PUT /api/projects/:id
 DELETE /api/projects/:id
 
 
-AI
+**AI**
 
 POST /api/ai/chat
 
@@ -424,7 +424,7 @@ POST /api/ai/scenario
 
 ---
 
-How It Works
+**How It Works**
 
 Clab AI uses context from three layers:
 
@@ -445,7 +445,7 @@ All AI responses are expected to be structured, concise, and safe to render in t
 
 ---
 
-Security and Stability
+**Security and Stability**
 
 Clab AI is built with production usage in mind.
 
@@ -493,11 +493,11 @@ npm run dev
 
 ---
 
-Deployment
+**Deployment**
 
 Recommended deployment setup:
 
-Frontend / Backend: Vercel
+Frontend / Backend: Replit
 
 Database: Neon, Supabase, or Railway
 
@@ -507,11 +507,11 @@ File handling / extra services: optional cloud storage as needed
 
 ---
 
-Project Goals
+**Project Goals**
 
-Clab AI is being built to feel like a real product, not just a hackathon demo. The long-term goal is to create a trusted assistant that helps meme coin creators think more clearly, plan more responsibly, and launch with better strategic discipline.
+**Clab AI** is being built to feel like a real product, not just a hackathon demo. The long-term goal is to create a trusted assistant that helps meme coin creators think more clearly, plan more responsibly, and launch with better strategic discipline.
 
-For Four.meme and BNB Chain teams, this means a tool that supports:
+For **Four.meme** and **BNB Chain** teams, this means a tool that supports:
 
 stronger launch preparation
 
@@ -527,14 +527,14 @@ healthier execution habits
 
 ---
 
-Disclaimer
+**Disclaimer**
 
 Clab AI provides strategic insights and planning support only. It does not guarantee outcomes, predict profits, or offer financial advice. Users should evaluate every decision independently and use the platform responsibly.
 
 
 ---
 
-Closing
+**Closing**
 
 Clab AI is built around one simple idea: better launches come from better thinking.
 
