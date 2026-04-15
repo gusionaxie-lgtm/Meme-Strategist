@@ -471,8 +471,8 @@ The goal is to keep the app stable even when AI output is imperfect.
 
 Installation
 
-git clone https://github.com/gusionaxie-lgtm/Meme-Strategist.git
-cd Meme-Strategist
+git clone https://github.com/gusionaxie-lgtm/Clab_AI_ver.1.1.git
+cd Clab_AI_ver.1.1
 npm install
 
 Create a .env file:
